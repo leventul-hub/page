@@ -9,7 +9,7 @@ const translations = {
     card4_title: "Корпоративная униформа",
     contact_title: "Контакты",
     phone_label: "Телефон:",
-    accent_phrase: "Создаём продукт для брендов, которые мыслят дальше."
+    accent_phrase: "..."
   },
   en: {
     hero_title: "Production with character.",
@@ -21,7 +21,7 @@ const translations = {
     card4_title: "Corporate uniform",
     contact_title: "Contacts",
     phone_label: "Phone:",
-    accent_phrase: "Built for brands that think further."
+    accent_phrase: "..."
   },
   uz: {
     hero_title: "Xarakterli ishlab chiqarish.",
@@ -33,7 +33,7 @@ const translations = {
     card4_title: "Korporativ forma",
     contact_title: "Aloqa",
     phone_label: "Telefon:",
-    accent_phrase: "Oldinga fikrlaydigan brendlar uchun yaratilgan."
+    accent_phrase: "..."
   }
 };
 
@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
 
 
 
