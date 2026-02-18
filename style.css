@@ -26,7 +26,7 @@ body {
   margin: auto;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 
 .header {
   padding: 40px 0;
@@ -64,7 +64,7 @@ body {
   color: #fff;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 
 .hero {
   padding: 140px 0;
@@ -80,14 +80,21 @@ body {
 .hero p {
   font-size: 18px;
   color: var(--text-soft);
-  max-width: 600px;
 }
 
-/* ===== ABOUT LINE SECTION ===== */
+/* SECTIONS */
 
-.about {
+.section {
   padding: 120px 0;
+  border-top: 1px solid var(--line);
 }
+
+.section h2 {
+  font-size: 28px;
+  margin-bottom: 80px;
+}
+
+/* ABOUT */
 
 .about-line {
   width: 60px;
@@ -103,17 +110,7 @@ body {
   color: var(--text-soft);
 }
 
-/* ===== SERVICES ===== */
-
-.section {
-  padding: 120px 0;
-  border-top: 1px solid var(--line);
-}
-
-.section h2 {
-  font-size: 28px;
-  margin-bottom: 80px;
-}
+/* SERVICES */
 
 .services-grid {
   display: grid;
@@ -124,9 +121,9 @@ body {
 .service-number {
   font-size: 12px;
   color: var(--text-soft);
-  display: block;
   margin-bottom: 10px;
   letter-spacing: 2px;
+  display: block;
 }
 
 .services-grid h3 {
@@ -134,11 +131,7 @@ body {
   font-weight: 400;
 }
 
-/* ===== CONTACT ===== */
-
-.contact-content {
-  max-width: 500px;
-}
+/* CONTACT */
 
 .contact-content p {
   margin-bottom: 14px;
@@ -154,29 +147,7 @@ body {
   color: #fff;
 }
 
-/* ===== FOOTER ===== */
-
-footer {
-  padding: 80px 0;
-  text-align: center;
-  font-size: 12px;
-  color: var(--text-soft);
-  border-top: 1px solid var(--line);
-}
-
-/* ===== RESPONSIVE ===== */
-
-@media(max-width: 900px){
-
-  .hero h1 {
-    font-size: 42px;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
-/* ===== ACCENT PHRASE ===== */
+/* ACCENT */
 
 .accent {
   padding: 160px 0;
@@ -193,5 +164,27 @@ footer {
   color: #fff;
 }
 
+/* FOOTER */
+
+footer {
+  padding: 80px 0;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-soft);
+  border-top: 1px solid var(--line);
 }
 
+/* RESPONSIVE */
+
+@media(max-width: 900px){
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+}
