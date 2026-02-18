@@ -1,252 +1,180 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
 :root {
-  --bg-main: #1e2023;
-  --bg-secondary: #25282c;
-  --border: #2f3338;
-  --text-main: #e6e6e6;
-  --text-soft: #a9adb3;
+  --bg-main: #1b1d20;
+  --text-main: #f2f2f2;
+  --text-soft: #8c9096;
+  --line: #2a2e33;
 }
 
-* {margin:0;padding:0;box-sizing:border-box;}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Inter', sans-serif;
   background: var(--bg-main);
   color: var(--text-main);
+  line-height: 1.6;
 }
 
 .container {
-  width:90%;
-  max-width:1200px;
-  margin:auto;
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
 }
 
-header {
-  padding:40px 0;
+/* ===== HEADER ===== */
+
+.header {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo-wrap {
-  display:flex;
-  align-items:center;
-  gap:15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .logo-icon {
-  width:40px;
-  opacity:0.9;
+  width: 36px;
 }
 
 .logo-text {
-  letter-spacing:6px;
-  font-weight:600;
+  letter-spacing: 6px;
+  font-size: 13px;
 }
+
+.lang-switch button {
+  background: none;
+  border: none;
+  color: var(--text-soft);
+  margin-left: 14px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.lang-switch button:hover {
+  color: #fff;
+}
+
+/* ===== HERO ===== */
 
 .hero {
-  position:relative;
-  height:90vh;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
+  padding: 140px 0;
+  max-width: 800px;
 }
 
-.hero-bg-logo {
-  position:absolute;
-  right:-200px;
-  top:50%;
-  transform:translateY(-50%);
-  width:700px;
-  height:700px;
-  background:url('https://i.imgur.com/your-logo-white.png') no-repeat center;
-  background-size:contain;
-  opacity:0.03;
+.hero h1 {
+  font-size: 64px;
+  font-weight: 800;
+  margin-bottom: 30px;
 }
 
-.hero-content h1 {
-  font-size:64px;
-  line-height:1.1;
-  margin-bottom:25px;
+.hero p {
+  font-size: 18px;
+  color: var(--text-soft);
+  max-width: 600px;
 }
 
-.hero-content p {
-  max-width:500px;
-  color:var(--text-soft);
-  margin-bottom:40px;
+/* ===== ABOUT LINE SECTION ===== */
+
+.about {
+  padding: 120px 0;
 }
 
-.btn {
-  padding:14px 30px;
-  background:var(--bg-secondary);
-  border:1px solid var(--border);
-  color:var(--text-main);
-  text-decoration:none;
-  transition:0.3s;
+.about-line {
+  width: 60px;
+  height: 1px;
+  background: var(--line);
+  margin-bottom: 40px;
 }
 
-.btn:hover {
-  background:#2c3035;
+.about-text {
+  max-width: 700px;
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--text-soft);
 }
+
+/* ===== SERVICES ===== */
 
 .section {
-  padding:120px 0;
-  border-top:1px solid var(--border);
+  padding: 120px 0;
+  border-top: 1px solid var(--line);
 }
 
 .section h2 {
-  font-size:38px;
-  margin-bottom:60px;
+  font-size: 28px;
+  margin-bottom: 80px;
 }
 
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:40px;
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px 60px;
 }
 
-.card {
-  background:var(--bg-secondary);
-  border:1px solid var(--border);
-  padding:40px;
-  transition:0.3s;
+.service-number {
+  font-size: 12px;
+  color: var(--text-soft);
+  display: block;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
 }
 
-.card:hover {
-  background:#2c3035;
+.services-grid h3 {
+  font-size: 22px;
+  font-weight: 400;
 }
 
-.card p {
-  color:var(--text-soft);
-  margin-top:10px;
+/* ===== CONTACT ===== */
+
+.contact-content {
+  max-width: 500px;
 }
 
-.manifest {
-  padding:140px 0;
-  text-align:center;
-  border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border);
+.contact-content p {
+  margin-bottom: 14px;
+  color: var(--text-soft);
 }
 
-.manifest h2 {
-  font-size:42px;
-  margin-bottom:20px;
+.contact-content a {
+  color: var(--text-soft);
+  text-decoration: none;
 }
 
-.manifest p {
-  color:var(--text-soft);
+.contact-content a:hover {
+  color: #fff;
 }
 
-form input,
-form textarea {
-  width:100%;
-  padding:15px;
-  margin-bottom:20px;
-  background:var(--bg-secondary);
-  border:1px solid var(--border);
-  color:var(--text-main);
-}
-
-form button {
-  padding:15px 30px;
-  background:var(--bg-secondary);
-  border:1px solid var(--border);
-  color:var(--text-main);
-  cursor:pointer;
-}
+/* ===== FOOTER ===== */
 
 footer {
-  position:relative;
-  padding:100px 0;
-  text-align:center;
-  color:var(--text-soft);
-}
-
-.footer-pattern {
-  position:absolute;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-50%);
-  width:300px;
-  height:300px;
-  background:url('https://i.imgur.com/your-logo-white.png') no-repeat center;
-  background-size:contain;
-  opacity:0.02;
-}
-
-header {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.insta-link {
+  padding: 80px 0;
+  text-align: center;
+  font-size: 12px;
   color: var(--text-soft);
-  text-decoration:none;
-  border-bottom:1px solid transparent;
-  transition:0.3s;
+  border-top: 1px solid var(--line);
 }
 
-.insta-link:hover {
-  border-bottom:1px solid var(--text-soft);
-}
+/* ===== RESPONSIVE ===== */
 
-.contact-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
-  align-items:center;
-}
+@media(max-width: 900px){
 
-.contact-grid a {
-  color: var(--text-soft);
-  text-decoration:none;
-}
-
-.map-container iframe {
-  border:1px solid var(--border);
-  filter: grayscale(100%) contrast(90%);
-}
-
-@media(max-width:768px){
-  .contact-grid{
-    grid-template-columns:1fr;
+  .hero h1 {
+    font-size: 42px;
   }
-}
-header {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
 
-.insta-link {
-  color: var(--text-soft);
-  text-decoration:none;
-  border-bottom:1px solid transparent;
-  transition:0.3s;
-}
-
-.insta-link:hover {
-  border-bottom:1px solid var(--text-soft);
-}
-
-.contact-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
-  align-items:center;
-}
-
-.contact-grid a {
-  color: var(--text-soft);
-  text-decoration:none;
-}
-
-.map-container iframe {
-  border:1px solid var(--border);
-  filter: grayscale(100%) contrast(90%);
-}
-
-@media(max-width:768px){
-  .contact-grid{
-    grid-template-columns:1fr;
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
   }
+
 }
