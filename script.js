@@ -1,4 +1,4 @@
-console.log("JS loaded");
+
 
 const translations = {
   ru: {
@@ -57,4 +57,5 @@ document.addEventListener("DOMContentLoaded", function () {
   const savedLang = localStorage.getItem("lang") || "ru";
   setLang(savedLang);
 });
+
 
