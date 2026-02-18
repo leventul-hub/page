@@ -1,3 +1,5 @@
+console.log("JS loaded");
+
 const translations = {
   ru: {
     hero_title: "Производство с характером.",
@@ -55,3 +57,4 @@ document.addEventListener("DOMContentLoaded", function () {
   const savedLang = localStorage.getItem("lang") || "ru";
   setLang(savedLang);
 });
+
