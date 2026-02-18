@@ -1,5 +1,3 @@
-
-
 const translations = {
   ru: {
     hero_title: "Производство с характером.",
@@ -39,8 +37,7 @@ const translations = {
   }
 };
 
-/* ГЛОБАЛЬНАЯ функция */
-function setLang(lang) {
+function setLanguage(lang) {
   localStorage.setItem("lang", lang);
   document.documentElement.lang = lang;
 
@@ -52,10 +49,21 @@ function setLang(lang) {
   });
 }
 
-/* Инициализация после загрузки */
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
+
   const savedLang = localStorage.getItem("lang") || "ru";
-  setLang(savedLang);
+  setLanguage(savedLang);
+
+  const buttons = document.querySelectorAll("[data-lang]");
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const lang = button.getAttribute("data-lang");
+      setLanguage(lang);
+    });
+  });
+
 });
+
+
 
 
