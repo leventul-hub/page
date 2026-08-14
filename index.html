@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Leventul — production studio in Tashkent. Designer clothing, branded merch and uniform production.">
-  <title>LEVENTUL — Production Studio</title>
+  <meta name="description" content="Leventul — швейная студия в Ташкенте. Пошив одежды, мерча и униформы для бизнеса и брендов.">
+  <title>LEVENTUL — Швейная студия</title>
+  <link rel="icon" type="image/png" href="logo.png">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,10 +17,10 @@
     <div class="logo-text">LEVENTUL</div>
   </div>
 
-  <nav class="lang-switch">
-    <button type="button" data-lang="ru">RU</button>
-    <button type="button" data-lang="en">EN</button>
-    <button type="button" data-lang="uz">UZ</button>
+  <nav class="lang-switch" aria-label="Выбор языка" data-i18n-aria-label="language_selector">
+    <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    <button type="button" data-lang="uz" aria-pressed="false">UZ</button>
   </nav>
 </header>
 
@@ -32,20 +33,19 @@
 
 <section class="section container about">
   <div class="about-line"></div>
-  <p class="about-text">
-    О нас
+  <h2 data-i18n="about_title"></h2>
 
-    Мы — швейная студия в Ташкенте, которая работает с брендами, компаниями и частными клиентами.
-
-    Делаем не «просто пошив», а решаем задачу:
-    — запустить коллекцию
-    — отшить партию
-    — создать униформу
-    — реализовать сложную идею
-
-   От идеи до готового изделия: малые и крупные партии, униформа, индивидуальный пошив и производство одежды под ключ
-
-  </p>
+  <div class="about-text">
+    <p data-i18n="about_intro"></p>
+    <p data-i18n="about_task_intro"></p>
+    <ul class="about-list">
+      <li data-i18n="about_task_1"></li>
+      <li data-i18n="about_task_2"></li>
+      <li data-i18n="about_task_3"></li>
+      <li data-i18n="about_task_4"></li>
+    </ul>
+    <p data-i18n="about_summary"></p>
+  </div>
 </section>
 
 <section class="section container services">
@@ -71,28 +71,22 @@
       <span class="service-number">04</span>
       <h3 data-i18n="card4_title"></h3>
     </div>
-     <div>
+    <div>
       <span class="service-number">05</span>
-      <h3 data-i18n="card4_title"></h3>
+      <h3 data-i18n="card5_title"></h3>
     </div>
   </div>
-</section>
-</section>
-
-<section class="section container about">
-  <div class="about-line"></div>
-  <p class="about-text">
-    О нас
-
-  </p>
 </section>
 
 <section class="section container contact">
   <h2 data-i18n="contact_title"></h2>
 
   <div class="contact-content">
-    <p><strong data-i18n="phone_label"></strong> +998 95 005 18 25</p>
-    <p>Email: info@leventul.uz</p>
+    <p>
+      <strong data-i18n="phone_label"></strong>
+      <a href="tel:+998950051825">+998 95 005 18 25</a>
+    </p>
+    <p>Email: <a href="mailto:info@leventul.uz">info@leventul.uz</a></p>
     <p>
       Instagram:
       <a href="https://instagram.com/leventul" target="_blank" rel="noopener">
@@ -116,4 +110,3 @@
 
 </body>
 </html>
-
